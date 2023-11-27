@@ -21,6 +21,19 @@ Chiedi all’utente la sua email, controlla che sia nella lista di chi può acce
 
 */
 
+//prendo email utente e racchiudo in costante
+const email = document.getElementById("exampleFormControlInput1").value;
+
+//prendo form e racchiudo in costante (per agganciarci event listener dopo)
+const form = document.getElementById("form");
+
+//stampo tutti i dati in console per vedere se funziona
+console.log(email);
+console.log(form);
+//lista di email per la verifia
+//verifica email vs lista
+//event listener
+
 /*
 Gioco dei dadi
 ------
