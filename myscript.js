@@ -46,7 +46,7 @@ form.addEventListener('submit',function(event){
 //verifica email vs lista
 
 /*
-if ( email inserita = lista email ){
+if ( email inserita in lista email ){
    entri
    messaggio riuscita
 } else {
