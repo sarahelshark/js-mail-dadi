@@ -33,4 +33,11 @@ Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. St
 -query selector o getElementById
 -condizionale
 
+>steps
+1.generare un numero da 1 a 6 per il giocatore
+2.generale un numero da 1 a 6 per il computer 
+3.confrontare i due numeri per decidere il vincitore
+4. annunciare il vincitore
+5.extra:chiedere se il giocatore vuole giocare di nuovo
+
 */
