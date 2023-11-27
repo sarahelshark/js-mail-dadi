@@ -1,4 +1,4 @@
-console.log("im working");
+//console.log("im working");
 /*
 Mail
 ------
@@ -35,16 +35,16 @@ const form = document.getElementById("form");
 console.log(email);
 console.log(form);
 
-//verifica email vs lista
-//event listener 
-/**form.addEventListener('submit',function(event){
+//devo "estrarre" il dato, piazzo un event listener 
+form.addEventListener('submit',function(event){
     event.preventDefault(); //prevents from autosubmitting
 
-    let distance = document.getElementById("number").value; //prendo dato km inserito da utente
-    console.log(distance);
+    const email = document.getElementById("exampleFormControlInput1").value;
+    console.log(email);
+})
+//verifica email vs lista
 
-    let age = document.getElementById("age").value; // prendo dato eta inserito da utente
-    console.log(age); */
+
 
 /*
 Gioco dei dadi
