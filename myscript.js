@@ -20,6 +20,10 @@ Chiedi all’utente la sua email, controlla che sia nella lista di chi può acce
 4. se la mail è presente nella lista l'utente può accedere, se non è presente l'utente viene bloccato
 
 */
+//creare lista di email per la verifica
+const emailList = ["random@gmail.com", "tommybell1ssimo@yahoo.it", "emaildelnonno@outlook.com", "lafantasiafinisce@hotmail.it", "emailipsum@yahoo.com"];
+//stampo per vedere se funziona
+console.log(emailList);
 
 //prendo email utente e racchiudo in costante
 const email = document.getElementById("exampleFormControlInput1").value;
@@ -30,9 +34,17 @@ const form = document.getElementById("form");
 //stampo tutti i dati in console per vedere se funziona
 console.log(email);
 console.log(form);
-//lista di email per la verifia
+
 //verifica email vs lista
-//event listener
+//event listener 
+/**form.addEventListener('submit',function(event){
+    event.preventDefault(); //prevents from autosubmitting
+
+    let distance = document.getElementById("number").value; //prendo dato km inserito da utente
+    console.log(distance);
+
+    let age = document.getElementById("age").value; // prendo dato eta inserito da utente
+    console.log(age); */
 
 /*
 Gioco dei dadi
