@@ -42,8 +42,18 @@ form.addEventListener('submit',function(event){
     const email = document.getElementById("exampleFormControlInput1").value;
     console.log(email);
 })
+
 //verifica email vs lista
 
+/*
+if ( email inserita = lista email ){
+   entri
+   messaggio riuscita
+} else {
+   non entri
+   messaggio informativo di accesso fallito
+}
+*/
 
 
 /*
