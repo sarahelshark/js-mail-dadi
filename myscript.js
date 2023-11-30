@@ -63,6 +63,9 @@ form.addEventListener('submit',function(event){
            // generare un numero da 1 a 6 per il giocatore
            let playerNumber = Math.ceil(Math.random() * 6);
            console.log(playerNumber);
+           // generare un numero da 1 a 6 per il computer 
+           let computerNumber = Math.ceil(Math.random() * 6);
+           console.log(computerNumber);
             
         })
    // se non è presente l'utente viene bloccato    
