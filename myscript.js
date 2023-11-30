@@ -78,12 +78,35 @@ form.addEventListener('submit',function(event){
 
            //per paragono i 2 dadi in una condizionale, dove creo 3 casistiche
            if(playerNumber > computerNumber){
-             console.log("The player wins!"); //vince il giocatore
-           
+              //vince il giocatore
+             document.querySelector(".card.shadow").innerHTML=`
+              <p class="d-flex flex-column mt-3 m-auto">
+                  You: ${playerNumber};
+                  <br>
+                  The computer: ${computerNumber};
+                  <br>
+                  <strong>The player wins!</strong>
+               </p>`
            }else if(playerNumber < computerNumber){
-             console.log("The computer wins!"); //il giocatore perde
+             //il giocatore perde
+             document.querySelector(".card.shadow").innerHTML=`
+              <p class="d-flex flex-column mt-3 m-auto">
+                  You: ${playerNumber};
+                  <br>
+                  The computer: ${computerNumber};
+                  <br>
+                  <strong>The computer wins :( </strong>
+               </p>`
            } else if (playerNumber === computerNumber) {
-             console.log("It's a tie!");//il giocatore pareggia;
+             //il giocatore pareggia;
+             document.querySelector(".card.shadow").innerHTML=`
+              <p class="d-flex flex-column mt-3 m-auto">
+                  You: ${playerNumber};
+                  <br>
+                  The computer: ${computerNumber};
+                  <br>
+                  <strong>it's a tie! </strong>
+               </p>`
             //chiedo se vuole giocare ancora; 
            }
             
