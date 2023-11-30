@@ -55,7 +55,10 @@ form.addEventListener('submit',function(event){
         document.querySelector('.row.g-3.m-auto').innerHTML = `<h5 class=" d-flex flex-column mt-3">E-mail correttamente registrata, divertiti un po' con questo mini-game e resta per quanto tempo desideri! <button class="btn btn-primary " style="width:fit-content; margin: .5rem auto;">Let's play</button></h5>`; //messaggio di riuscita, inserisco un bottone che li rimanda al gioco dei dadi
    // se non è presente l'utente viene bloccato    
     } else {
-        console.log("la tua email non è presente");//messaggio informativo di accesso fallito, li invito ad iscriversi alla newsletter con una allerta
+      document.querySelector('.row.g-3.m-auto').innerHTML = `<h5 class="mt-3 mb-3" style="width: 500px;">"Che peccato! Sembra che tu non sia ancora iscritt&#601; alla nostra newsletter, ma ti aspetto molto presto!"`;//messaggio informativo di accesso fallito, li invito ad iscriversi alla newsletter con un altro messaggio
+      document.querySelector('.card.shadow').classList.add(".bg-danger-subtle"); //coloro di rosso la card, luigi perch non funziona? :(
+      document.querySelector('.card.shadow').style.color = "red";
+
     }
 
 })
