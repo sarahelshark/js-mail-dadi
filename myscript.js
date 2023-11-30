@@ -70,22 +70,24 @@ form.addEventListener('submit',function(event){
            // generare un numero da 1 a 6 per il giocatore
            let playerNumber = Math.ceil(Math.random() * 6);
            console.log(playerNumber);
+
            // generare un numero da 1 a 6 per il computer 
            let computerNumber = Math.ceil(Math.random() * 6);
            console.log(computerNumber);
+
+
            //per paragono i 2 dadi in una condizionale, dove creo 3 casistiche
-           /*if(playerNumber > computerNumber){
-            vince il giocatore;
-            chiedo se vuole giocare ancora;
+           if(playerNumber > computerNumber){
+             console.log("The player wins!"); //vince il giocatore
+           
            }else if(playerNumber < computerNumber){
-            il giocatore perde
-            chiedo se vuole giocare ancora;
-           }else()
-            il giocatore pareggia;
-            chiedo se vuole giocare ancora; 
+             console.log("The computer wins!"); //il giocatore perde
+           } else if (playerNumber === computerNumber) {
+             console.log("It's a tie!");//il giocatore pareggia;
+            //chiedo se vuole giocare ancora; 
            }
-         */
             
+           
         })
    // se non è presente l'utente viene bloccato    
     } else {
