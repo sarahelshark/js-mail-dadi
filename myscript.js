@@ -26,13 +26,13 @@ const emailList = ["random@gmail.com", "tommybell1ssimo@yahoo.it", "emaildelnonn
 console.log(emailList);
 
 //prendo email utente e racchiudo in costante
-const email = document.getElementById("exampleFormControlInput1").value;
+//const email = document.getElementById("exampleFormControlInput1").value;
 
 //prendo form e racchiudo in costante (per agganciarci event listener dopo)
 const form = document.getElementById("form");
 
 //stampo tutti i dati in console per vedere se funziona
-console.log(email);
+//console.log(email);
 console.log(form);
 
 //devo "estrarre" il dato, piazzo un event listener 
@@ -40,7 +40,24 @@ form.addEventListener('submit',function(event){
     event.preventDefault(); //prevents from autosubmitting
 
     const email = document.getElementById("exampleFormControlInput1").value;
-    console.log(email);
+    console.log(email);//email inserita a utente
+
+    let emailCheck = false; //variabile con booleano che mi permetterà di fare un paragone 'per esclusione'. Ovvero di default decido che tutte le emnail sono false, tranne quelle che ho segnato nella variabile emailList
+
+    for (let i=0; i < emailList.length; i++) {
+        if (emailList[i] === email) {
+            emailCheck = true;
+        }
+    }; // il ciclo serve per creare una situazione in cui posso fare diverse verifiche, confronto variabili create in precedenza con le email inserite da un ipotetico utente 
+    
+    // se la mail è presente nella lista, allora l'utente può accedere,
+    if (emailCheck == 1) {
+        console.log("la tua email è presente "); //messaggio di riuscita, inserisco un bottone che li rimanda al gioco dei dadi
+     // se non è presente l'utente viene bloccato    
+    } else {
+        console.log("la tua email non è presente");//messaggio informativo di accesso fallito, li invito ad iscriversi alla newsletter con una allerta
+    }
+
 })
 
 //verifica email vs lista
@@ -48,10 +65,8 @@ form.addEventListener('submit',function(event){
 /*
 if ( email inserita in lista email ){
    entri
-   messaggio riuscita
 } else {
    non entri
-   messaggio informativo di accesso fallito
 }
 */
 
