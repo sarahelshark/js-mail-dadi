@@ -20,6 +20,7 @@ Chiedi all’utente la sua email, controlla che sia nella lista di chi può acce
 4. se la mail è presente nella lista l'utente può accedere, se non è presente l'utente viene bloccato
 
 */
+
 //creare lista di email per la verifica
 const emailList = ["random@gmail.com", "tommybell1ssimo@yahoo.it", "emaildelnonno@outlook.com", "lafantasiafinisce@hotmail.it", "emailipsum@yahoo.com"];
 //stampo per vedere se funziona
@@ -52,14 +53,22 @@ form.addEventListener('submit',function(event){
     
     // se la mail è presente nella lista, allora l'utente può accedere,
     if (emailCheck == 1) {
-        document.querySelector('.row.g-3.m-auto').innerHTML = `<h5 class=" d-flex flex-column mt-3">E-mail correttamente registrata, divertiti un po' con questo mini-game e resta per quanto tempo desideri! <button class="btn btn-primary " style="width:fit-content; margin: .5rem auto;">Let's play</button></h5>`; //messaggio di riuscita, inserisco un bottone che li rimanda al gioco dei dadi
+        document.querySelector('.row.g-3.m-auto').innerHTML = `<h5 class=" d-flex flex-column mt-3">E-mail correttamente registrata, divertiti un po' con questo mini-game e resta per quanto tempo desideri! <button id="myButton" class="btn btn-primary " style="width:fit-content; margin: .5rem auto;">Let's play</button></h5>`; //messaggio di riuscita, 
+        
+        //inserisco il bottone in una variabile per poi agganciarci un event listener al click, che li rimanda al gioco dei dadi,
+        let button = document.getElementById("myButton");
+
+        button.addEventListener('click', function(event){
+           console.log("it works");
+           
+            
+        })
    // se non è presente l'utente viene bloccato    
     } else {
       document.querySelector('.row.g-3.m-auto').innerHTML = `<h5 class="mt-3 mb-3" style="width: 500px;">"Che peccato! Sembra che tu non sia ancora iscritt&#601; alla nostra newsletter, ma ti aspetto molto presto!"`;//messaggio informativo di accesso fallito, li invito ad iscriversi alla newsletter con un altro messaggio
       document.querySelector('.card.shadow').classList.add(".bg-danger-subtle"); //coloro di rosso la card, luigi perch non funziona? :(
-      document.querySelector('.card.shadow').style.color = "red";
-
-    }
+      document.querySelector('.card.shadow').style.color = "red"; // mi colora il testo, mentre io volevo lo sfondo... 
+    } 
 
 })
 
