@@ -34,7 +34,7 @@ const form = document.getElementById("form");
 
 //stampo tutti i dati in console per vedere se funziona
 //console.log(email);
-console.log(form);
+//console.log(form);
 
 //devo "estrarre" il dato, piazzo un event listener 
 form.addEventListener('submit',function(event){
@@ -53,7 +53,14 @@ form.addEventListener('submit',function(event){
     
     // se la mail è presente nella lista, allora l'utente può accedere,
     if (emailCheck == 1) {
-        document.querySelector('.row.g-3.m-auto').innerHTML = `<h5 class=" d-flex flex-column mt-3">E-mail correttamente registrata, divertiti un po' con questo mini-game e resta per quanto tempo desideri! <button id="myButton" class="btn btn-primary " style="width:fit-content; margin: .5rem auto;">Let's play</button></h5>`; //messaggio di riuscita, 
+        form.classList.add("d-none");//nascondo il form, ma lo tengo in pagina per funzionalità
+
+        document.querySelector(".card.shadow").innerHTML=`
+        <h5 class="d-flex flex-column mt-3 m-auto">E-mail correttamente registrata, divertiti un po' con questo mini-game e resta per quanto tempo desideri! 
+          <button id="myButton" class="btn btn-primary" style="width:fit-content; margin: .5rem auto;">
+          Let's play
+          </button>
+        </h5>`//aggingo html con messaggio di riuscita, 
         
         //inserisco il bottone in una variabile per poi agganciarci un event listener al click, che li rimanda al gioco dei dadi,
         let button = document.getElementById("myButton");
@@ -73,7 +80,7 @@ form.addEventListener('submit',function(event){
            }else if(playerNumber < computerNumber){
             il giocatore perde
             chiedo se vuole giocare ancora;
-           }else(playerNum === computerNum)
+           }else()
             il giocatore pareggia;
             chiedo se vuole giocare ancora; 
            }
