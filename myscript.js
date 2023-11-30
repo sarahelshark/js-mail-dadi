@@ -86,7 +86,10 @@ form.addEventListener('submit',function(event){
                   The computer: ${computerNumber};
                   <br>
                   <strong>The player wins!</strong>
-               </p>`
+               </p>
+               `
+               let retake = document.getElementById("loopButton"); //faccio apparire bottone per il prossimo retake
+               retake.classList.remove('d-none');
            }else if(playerNumber < computerNumber){
              //il giocatore perde
              document.querySelector(".card.shadow").innerHTML=`
@@ -96,7 +99,11 @@ form.addEventListener('submit',function(event){
                   The computer: ${computerNumber};
                   <br>
                   <strong>The computer wins :( </strong>
-               </p>`
+               </p>
+               ` 
+               let retake = document.getElementById("loopButton"); //faccio apparire bottone per il prossimo retake
+               retake.classList.remove('d-none');
+
            } else if (playerNumber === computerNumber) {
              //il giocatore pareggia;
              document.querySelector(".card.shadow").innerHTML=`
@@ -106,11 +113,13 @@ form.addEventListener('submit',function(event){
                   The computer: ${computerNumber};
                   <br>
                   <strong>it's a tie! </strong>
-               </p>`
+               </p>
+               `
+               let retake = document.getElementById("loopButton"); //faccio apparire bottone per il prossimo retake
+               retake.classList.remove('d-none');
             //chiedo se vuole giocare ancora; 
            }
             
-           
         })
    // se non è presente l'utente viene bloccato    
     } else {
@@ -121,6 +130,8 @@ form.addEventListener('submit',function(event){
 
 })
 
+
+   
 //verifica email vs lista
 
 /*
