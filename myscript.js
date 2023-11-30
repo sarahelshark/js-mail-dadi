@@ -52,8 +52,8 @@ form.addEventListener('submit',function(event){
     
     // se la mail è presente nella lista, allora l'utente può accedere,
     if (emailCheck == 1) {
-        console.log("la tua email è presente "); //messaggio di riuscita, inserisco un bottone che li rimanda al gioco dei dadi
-     // se non è presente l'utente viene bloccato    
+        document.querySelector('.row.g-3.m-auto').innerHTML = `<h5 class=" d-flex flex-column mt-3">E-mail correttamente registrata, divertiti un po' con questo mini-game e resta per quanto tempo desideri! <button class="btn btn-primary " style="width:fit-content; margin: .5rem auto;">Let's play</button></h5>`; //messaggio di riuscita, inserisco un bottone che li rimanda al gioco dei dadi
+   // se non è presente l'utente viene bloccato    
     } else {
         console.log("la tua email non è presente");//messaggio informativo di accesso fallito, li invito ad iscriversi alla newsletter con una allerta
     }
