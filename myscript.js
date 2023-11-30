@@ -66,6 +66,18 @@ form.addEventListener('submit',function(event){
            // generare un numero da 1 a 6 per il computer 
            let computerNumber = Math.ceil(Math.random() * 6);
            console.log(computerNumber);
+           //per paragono i 2 dadi in una condizionale, dove creo 3 casistiche
+           /*if(playerNumber > computerNumber){
+            vince il giocatore;
+            chiedo se vuole giocare ancora;
+           }else if(playerNumber < computerNumber){
+            il giocatore perde
+            chiedo se vuole giocare ancora;
+           }else(playerNum === computerNum)
+            il giocatore pareggia;
+            chiedo se vuole giocare ancora; 
+           }
+         */
             
         })
    // se non è presente l'utente viene bloccato    
