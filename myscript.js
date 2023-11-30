@@ -41,7 +41,7 @@ form.addEventListener('submit',function(event){
     event.preventDefault(); //prevents from autosubmitting
 
     const email = document.getElementById("exampleFormControlInput1").value;
-    console.log(email);//email inserita a utente
+    //console.log(email);//email inserita a utente
 
     let emailCheck = false; //variabile con booleano che mi permetterà di fare un paragone 'per esclusione'. Ovvero di default decido che tutte le emnail sono false, tranne quelle che ho segnato nella variabile emailList
 
@@ -59,8 +59,10 @@ form.addEventListener('submit',function(event){
         let button = document.getElementById("myButton");
 
         button.addEventListener('click', function(event){
-           console.log("it works");
-           
+           //console.log("it works");
+           // generare un numero da 1 a 6 per il giocatore
+           let playerNumber = Math.ceil(Math.random() * 6);
+           console.log(playerNumber);
             
         })
    // se non è presente l'utente viene bloccato    
