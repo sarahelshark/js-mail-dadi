@@ -86,13 +86,35 @@ form.addEventListener('submit',function(event){
                   The computer: ${computerNumber};
                   <br>
                   <strong>The player wins!</strong>
-               </p>
-               `
-               let retake = document.getElementById("loopButton"); //faccio apparire bottone per il prossimo retake
-               retake.classList.remove('d-none');
-           }else if(playerNumber < computerNumber){
-             //il giocatore perde
-             document.querySelector(".card.shadow").innerHTML=`
+              </p>
+              `
+                let retake = document.getElementById("loopButton"); //faccio apparire bottone per il prossimo retake
+                retake.classList.remove('d-none');
+               
+                //aggancio event listener per creare il loop
+                retake.addEventListener('click', function(){ 
+                 //console.log("it worked"); 
+                 // generare un numero da 1 a 6 per il giocatore
+                 let playerNumber = Math.ceil(Math.random() * 6);
+                 console.log(playerNumber);
+                 // generare un numero da 1 a 6 per il computer 
+                 let computerNumber = Math.ceil(Math.random() * 6);
+                 console.log(computerNumber);
+                 if (playerNumber > computerNumber){
+                  console.log("vinto");
+                 }else if (computerNumber > playerNumber){
+                  console.log("perso");
+                 }else if (playerNumber === computerNumber){
+                  console.log("pareggio");
+                 }
+                })
+                
+              
+
+               
+        }else if(playerNumber < computerNumber){
+              //il giocatore perde
+               document.querySelector(".card.shadow").innerHTML=`
               <p class="d-flex flex-column mt-3 m-auto pb-3">
                   You: ${playerNumber};
                   <br>
@@ -102,11 +124,24 @@ form.addEventListener('submit',function(event){
                </p>
                ` 
                let retake = document.getElementById("loopButton"); //faccio apparire bottone per il prossimo retake
-               retake.classList.remove('d-none');
-               //aggancio event listener per creare il loop
+               retake.classList.remove('d-none');//aggancio event listener per creare il loop
                retake.addEventListener('click', function(){ 
-                console.log("it worked");
-              })
+                //console.log("it worked"); 
+                // generare un numero da 1 a 6 per il giocatore
+                let playerNumber = Math.ceil(Math.random() * 6);
+                console.log(playerNumber);
+                // generare un numero da 1 a 6 per il computer 
+                let computerNumber = Math.ceil(Math.random() * 6);
+                console.log(computerNumber);
+                if (playerNumber > computerNumber){
+                  console.log("vinto");
+                 }else if (computerNumber > playerNumber){
+                  console.log("perso");
+                 }else if (playerNumber === computerNumber){
+                  console.log("pareggio");
+                 }
+               })
+               
 
            } else if (playerNumber === computerNumber) {
              //il giocatore pareggia;
@@ -121,7 +156,24 @@ form.addEventListener('submit',function(event){
                `
                let retake = document.getElementById("loopButton"); //faccio apparire bottone per il prossimo retake
                retake.classList.remove('d-none');
-            //chiedo se vuole giocare ancora; 
+               //aggancio event listener per creare il loop
+               retake.addEventListener('click', function(){ 
+                //console.log("it worked"); 
+                // generare un numero da 1 a 6 per il giocatore
+                let playerNumber = Math.ceil(Math.random() * 6);
+                console.log(playerNumber);
+                // generare un numero da 1 a 6 per il computer 
+                let computerNumber = Math.ceil(Math.random() * 6);
+                console.log(computerNumber);
+                if (playerNumber > computerNumber){
+                  console.log("vinto");
+                 }else if (computerNumber > playerNumber){
+                  console.log("perso");
+                 }else if (playerNumber === computerNumber){
+                  console.log("pareggio");
+                 }
+               })
+                
            }
            
             
@@ -132,7 +184,6 @@ form.addEventListener('submit',function(event){
       document.querySelector('.card.shadow').classList.add(".bg-danger-subtle"); //coloro di rosso la card, luigi perch non funziona? :(
       document.querySelector('.card.shadow').style.color = "red"; // mi colora il testo, mentre io volevo lo sfondo... 
     } 
-
 })
 
 
