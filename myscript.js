@@ -103,6 +103,10 @@ form.addEventListener('submit',function(event){
                ` 
                let retake = document.getElementById("loopButton"); //faccio apparire bottone per il prossimo retake
                retake.classList.remove('d-none');
+               //aggancio event listener per creare il loop
+               retake.addEventListener('click', function(){ 
+                console.log("it worked");
+              })
 
            } else if (playerNumber === computerNumber) {
              //il giocatore pareggia;
