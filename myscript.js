@@ -119,6 +119,7 @@ form.addEventListener('submit',function(event){
                retake.classList.remove('d-none');
             //chiedo se vuole giocare ancora; 
            }
+           
             
         })
    // se non è presente l'utente viene bloccato    
