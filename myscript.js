@@ -80,7 +80,7 @@ form.addEventListener('submit',function(event){
            if(playerNumber > computerNumber){
               //vince il giocatore
              document.querySelector(".card.shadow").innerHTML=`
-              <p class="d-flex flex-column mt-3 m-auto">
+              <p class="d-flex flex-column mt-3 m-auto pb-3">
                   You: ${playerNumber};
                   <br>
                   The computer: ${computerNumber};
@@ -93,7 +93,7 @@ form.addEventListener('submit',function(event){
            }else if(playerNumber < computerNumber){
              //il giocatore perde
              document.querySelector(".card.shadow").innerHTML=`
-              <p class="d-flex flex-column mt-3 m-auto">
+              <p class="d-flex flex-column mt-3 m-auto pb-3">
                   You: ${playerNumber};
                   <br>
                   The computer: ${computerNumber};
@@ -107,7 +107,7 @@ form.addEventListener('submit',function(event){
            } else if (playerNumber === computerNumber) {
              //il giocatore pareggia;
              document.querySelector(".card.shadow").innerHTML=`
-              <p class="d-flex flex-column mt-3 m-auto">
+              <p class="d-flex flex-column mt-3 m-auto pb-3 ">
                   You: ${playerNumber};
                   <br>
                   The computer: ${computerNumber};
